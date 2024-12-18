@@ -27,4 +27,33 @@
     </dependencies>
 
 </project>
+src/
+ └─ main/
+     └─ java/
+         └─ com/
+             └─ example/
+                 └─ PdfSigner.java
+pom.xml  (for Maven dependencies)
+<dependencies>
+    <!-- Apache PDFBox for PDF manipulation -->
+    <dependency>
+        <groupId>org.apache.pdfbox</groupId>
+        <artifactId>pdfbox</artifactId>
+        <version>2.0.27</version>
+    </dependency>
+
+    <!-- Bouncy Castle for Cryptography -->
+    <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcprov-jdk15on</artifactId>
+        <version>1.70</version>
+    </dependency>
+
+    <!-- Bouncy Castle PKCS7 for handling digital signatures -->
+    <dependency>
+        <groupId>org.bouncycastle</groupId>
+        <artifactId>bcpkix-jdk15on</artifactId>
+        <version>1.70</version>
+    </dependency>
+</dependencies>
 
