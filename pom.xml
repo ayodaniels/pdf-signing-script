@@ -162,4 +162,32 @@ public class PdfSigner {
         signPdf(inputPdf, outputPdf, certPath, certPassword, alias);
     }
 }
+your-project/
+│
+├── pom.xml                      # The Maven build file
+├── src/
+│   └── main/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── PdfSigner.java    # Your Java source file
+│
+└── target/                        # Compiled files go here
+    └── classes/
+        └── com/
+            └── example/
+                └── PdfSigner.class    # This will be created after compilation
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+            <configuration>
+                <source>1.8</source> <!-- Or your Java version -->
+                <target>1.8</target> <!-- Or your Java version -->
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
 
