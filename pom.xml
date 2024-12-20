@@ -247,4 +247,17 @@ your-project
         </plugin>
     </plugins>
 </build>
+package com.example;
+
+import java.io.File;
+import java.security.KeyStore;
+import java.security.PrivateKey;
+import java.security.cert.X509Certificate;
+
+public class PdfSigner {
+    public static void main(String[] args) {
+        // Your logic to sign PDFs
+        System.out.println("PDF Signer Started...");
+    }
+}
 
