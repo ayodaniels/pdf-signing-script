@@ -279,4 +279,56 @@ public class PdfSigner {
         </plugin>
     </plugins>
 </build>
+package com.example;
 
+import java.io.File;
+import java.io.IOException;
+
+public class PdfSigner {
+    
+    public static void main(String[] args) {
+        try {
+            System.out.println("Starting PDF signing process...");
+            // Simulate signing a PDF (replace with actual PDF signing logic)
+            File pdfFile = new File("path/to/your/file.pdf");
+            if (!pdfFile.exists()) {
+                throw new IOException("PDF file not found: " + pdfFile.getAbsolutePath());
+            }
+
+            // Add your PDF signing logic here
+            System.out.println("PDF signed successfully!");
+        } catch (Exception e) {
+            e.printStackTrace();  // Print the exception stack trace to debug
+        }
+    }
+}
+<dependencies>
+    <dependency>
+        <groupId>com.itextpdf</groupId>
+        <artifactId>itext7-core</artifactId>
+        <version>7.2.2</version>
+    </dependency>
+</dependencies>
+package com.example;
+
+import java.io.File;
+import java.io.IOException;
+
+public class PdfSigner {
+    
+    public static void main(String[] args) {
+        try {
+            System.out.println("Starting PDF signing process...");
+            // Simulate signing a PDF (replace with actual PDF signing logic)
+            File pdfFile = new File("path/to/your/file.pdf");
+            if (!pdfFile.exists()) {
+                throw new IOException("PDF file not found: " + pdfFile.getAbsolutePath());
+            }
+
+            // Add your PDF signing logic here
+            System.out.println("PDF signed successfully!");
+        } catch (Exception e) {
+            e.printStackTrace();  // Print the exception stack trace to debug
+        }
+    }
+}
