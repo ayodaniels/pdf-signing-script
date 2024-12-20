@@ -101,3 +101,13 @@ public class PdfSigner {
         </plugin>
     </plugins>
 </build>
+package com.example;
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}
+<configuration>
+    <mainClass>com.example.HelloWorld</mainClass>
+</configuration>
