@@ -332,3 +332,7 @@ public class PdfSigner {
         }
     }
 }
+File pdfFile = new File("path/to/your/pdf-file.pdf");
+if (!pdfFile.exists()) {
+    System.out.println("File not found: " + pdfFile.getAbsolutePath());
+}
