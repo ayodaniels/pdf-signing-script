@@ -17,81 +17,34 @@
             <version>7.2.4</version>
             <type>pom</type>
         </dependency>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <modelVersion>4.0.0</modelVersion>
 
-        <!-- BouncyCastle for cryptographic operations -->
-        <dependency>
-            <groupId>org.bouncycastle</groupId>
-            <artifactId>bcprov-jdk15on</artifactId>
-            <version>1.70</version>
-        </dependency>
-    </dependencies>
+   <groupId>com.example</groupId>
+   <artifactId>pdf-signing</artifactId>
+   <version>1.0-SNAPSHOT</version>
 
-</project>
-src/
- └─ main/
-     └─ java/
-         └─ com/
-             └─ example/
-                 └─ PdfSigner.java
-pom.xml  (for Maven dependencies)
-<dependencies>
-    <!-- Apache PDFBox for PDF manipulation -->
-    <dependency>
-        <groupId>org.apache.pdfbox</groupId>
-        <artifactId>pdfbox</artifactId>
-        <version>2.0.27</version>
-    </dependency>
-package com.example;
-import java.io.File;
+   <dependencies>
+       <!-- iText library for PDF creation and signing -->
+       <dependency>
+           <groupId>com.itextpdf</groupId>
+           <artifactId>itextpdf</artifactId>
+           <version>7.1.16</version>
+       </dependency>
 
-public class PdfSigner {
-    
-    public static void main(String[] args) {
-        try {
-            System.out.println("Starting PDF signing process...");
-            
-            // Add your PDF signing logic here
-            File pdfFile = new File("path/to/your/pdf-file.pdf");
-            if (!pdfFile.exists()) {
-                System.err.println("PDF file not found: " + pdfFile.getAbsolutePath());
-                return;
-            }
+       <!-- Google Cloud Storage dependencies -->
+       <dependency>
+           <groupId>com.google.cloud</groupId>
+           <artifactId>google-cloud-storage</artifactId>
+           <version>2.6.0</version>
+       </dependency>
 
-            // Additional logic for signing the PDF
-
-            System.out.println("PDF signing process completed successfully!");
-
-        } catch (Exception e) {
-            e.printStackTrace();  // Print the exception stack trace to debug
-        }
-    }
-}
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>exec-maven-plugin</artifactId>
-            <version>3.5.0</version>
-            <executions>
-                <execution>
-                    <goals>
-                        <goal>java</goal>
-                    </goals>
-                    <configuration>
-                        <mainClass>com.example.PdfSigner</mainClass>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-package com.example;
-
-public class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
-    }
-}
-<configuration>
-    <mainClass>com.example.HelloWorld</mainClass>
-</configuration>
+       <!-- Google Cloud Functions runtime dependencies -->
+       <dependency>
+           <groupId>com.google.cloud.functions</groupId>
+           <artifactId>functions-framework-api</artifactId>
+           <version>1.0.0</version>
+       </dependency>
+   </dependencies>
